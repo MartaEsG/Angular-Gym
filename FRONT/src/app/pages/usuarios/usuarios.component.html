@@ -1,5 +1,13 @@
 <form [formGroup]="registerForm" (ngSubmit)="registrar()">
     <div>
+        <input type="text" placeholder="Name" formControlName="name" />
+        <p *ngIf="(submited && registerForm?.get('name')?.hasError('required'))">El campo es requerido</p>
+    </div>
+    <div>
+        <input type="text" placeholder="Age" formControlName="age" />
+        <p *ngIf="(submited && registerForm?.get('age')?.hasError('required'))">El campo es requerido</p>
+    </div>
+    <div>
         <input type="email" placeholder="Email" formControlName="email" />
         <p *ngIf="(submited && registerForm?.get('email')?.hasError('required'))">El campo es requerido</p>
         <p *ngIf="(submited && registerForm?.get('email')?.hasError('pattern'))">No tiene formato valido</p>
