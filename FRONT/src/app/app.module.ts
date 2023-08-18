@@ -12,6 +12,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { AddClassComponent } from './pages/add-class/add-class.component';
 import { EditClassComponent } from './pages/edit-class/edit-class.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ClaseComponent,
     NavbarComponent,
     AddClassComponent,
-    EditClassComponent
+    EditClassComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
