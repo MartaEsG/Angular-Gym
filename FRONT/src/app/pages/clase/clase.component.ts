@@ -13,7 +13,7 @@ export class ClaseComponent implements OnInit{
   id!: any
   clase!: ClassI
 
-  constructor(private classApi: ClassService, private activatedRoute: ActivatedRoute, private router: Router){}
+  constructor(public classApi: ClassService, private activatedRoute: ActivatedRoute, private router: Router){}
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(params => {

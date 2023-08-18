@@ -6,8 +6,8 @@
     <h4>Tipo: {{clase.type}}</h4>
     <img src="{{clase.img}}" alt="{{clase.name}}"/>
     <a routerLink="/clases">Volver</a>
-    <button (click)="editar()">Editar</button>
-    <button (click)="borrar()">Borrar</button>
+    <button *ngIf="classApi.getToken()" (click)="editar()">Editar</button>
+    <button *ngIf="classApi.getToken()" (click)="borrar()">Borrar</button>
 </div>
 </div>
 

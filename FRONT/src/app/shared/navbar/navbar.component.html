@@ -1,8 +1,8 @@
 <nav>
-    <a routerLink="/">Home</a>
-    <a routerLink="/clases">Clases</a>
-    <a routerLink="/añadir">Añadir Clases</a>
-    <a routerLink="/usuarios">Registrar</a>
-    <a routerLink="/login">Login</a>
-
+    <button><a routerLink="/">Home</a></button>
+    <button><a routerLink="/clases">Clases</a></button>
+    <button><a *ngIf="api.getToken()" routerLink="/añadir">Añadir Clases</a></button>
+    <button><a *ngIf="!api.getToken()" routerLink="/usuarios">Registrar</a></button>
+    <button><a *ngIf="!api.getToken()" routerLink="/login">Login</a></button>
+    <button *ngIf="api.getToken()" (click)="logout()">LogOut</button>
 </nav>

@@ -22,6 +22,15 @@ export class ClassService {
     return this.http.post(`${this.url2}/login`, user)
   }
 
+  getToken(){
+    return localStorage.getItem('token')
+  }
+
+  logout(){
+    localStorage.removeItem('token')
+    localStorage.removeItem('user')
+  }
+
   getClases(){
    return this.http.get(this.url)
   }
