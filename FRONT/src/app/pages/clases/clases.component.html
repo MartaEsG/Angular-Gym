@@ -1,0 +1,9 @@
+<div class="clases">
+    <div class="clase" *ngFor="let clase of listado">
+        <h2>{{clase.name}}</h2>
+        <h4>{{clase.duration}}</h4>
+        <img src="{{clase.img}}" alt="{{clase.name}}"/>
+        <a routerLink="/clases/{{clase._id}}">Ver más</a>
+
+    </div>
+</div>

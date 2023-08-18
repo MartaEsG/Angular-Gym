@@ -1,0 +1,13 @@
+<div class="clases">
+<div class="clase" *ngIf="clase">
+    <h2>{{clase.name}}</h2>
+    <h4>Duración: {{clase.duration}}</h4>
+    <h4> Sala: {{clase.class}}</h4>
+    <h4>Tipo: {{clase.type}}</h4>
+    <img src="{{clase.img}}" alt="{{clase.name}}"/>
+    <a routerLink="/clases">Volver</a>
+    <button (click)="editar()">Editar</button>
+    <button (click)="borrar()">Borrar</button>
+</div>
+</div>
+
