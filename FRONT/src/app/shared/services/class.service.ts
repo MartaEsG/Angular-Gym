@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ClassI } from 'src/app/models/interfaces';
+import { ClassI, UserI } from 'src/app/models/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +8,15 @@ import { ClassI } from 'src/app/models/interfaces';
 export class ClassService {
 
   url:string ="http://localhost:5000/class";
+  url2: string="http://localhost:5000/users"
   id!: any;
   clase!: ClassI;
 
   constructor(private http: HttpClient) { }
+
+  register(user: UserI){
+    return this.http.post(`${this.url2}/register`, user)
+  }
 
   getClases(){
    return this.http.get(this.url)

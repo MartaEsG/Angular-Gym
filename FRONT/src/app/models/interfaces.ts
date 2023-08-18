@@ -6,3 +6,9 @@ export interface ClassI {
     type: string,
     img: string
 }
+
+export interface UserI{
+    id?: string;
+    email: string;
+    password: string;
+}
