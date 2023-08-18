@@ -18,6 +18,10 @@ export class ClassService {
     return this.http.post(`${this.url2}/register`, user)
   }
 
+  login(user: UserI){
+    return this.http.post(`${this.url2}/login`, user)
+  }
+
   getClases(){
    return this.http.get(this.url)
   }

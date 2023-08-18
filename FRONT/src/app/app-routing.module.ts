@@ -6,6 +6,7 @@ import { EditClassComponent } from './pages/edit-class/edit-class.component';
 import { ClaseComponent } from './pages/clase/clase.component';
 import { AddClassComponent } from './pages/add-class/add-class.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [ {
   path: "", component: HomeComponent
@@ -19,6 +20,8 @@ const routes: Routes = [ {
 {path: "usuarios", component: UsuariosComponent
 },
 {path: "clases/:id", component: ClaseComponent
+},{
+  path: "login", component: LoginComponent
 }
 ];
 
