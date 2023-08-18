@@ -22,8 +22,12 @@ export class LoginComponent  implements OnInit{
   login(){
     this.submited = true;
     if(this.loginForm.valid){
-      this.api.login(this.loginForm.value).subscribe(data =>{
+      this.api.login(this.loginForm.value).subscribe((data:any) =>{
         console.log(data)
+        alert("Que maquina, te logueaste!")
+        localStorage.setItem('token', data.token)
+        localStorage.setItem('user', JSON.stringify(data.user))
+        this.router.navigate(['/clases']);
       })
     }
   }
