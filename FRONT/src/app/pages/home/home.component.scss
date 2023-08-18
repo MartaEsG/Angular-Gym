@@ -1,5 +1,59 @@
-.fondo{ 
-    color: beige;
-    height: 100vh;
-    background-image: url("https://png.pngtree.com/background/20230528/original/pngtree-an-empty-gym-with-some-equipment-and-dark-walls-picture-image_2773763.jpg");
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    h1 {
+        font-size: 50px;
+        margin-bottom: 50px;
+    }
+
+    &-programas {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        text-align: center;
+
+        &-tarjetas:hover {
+            transform: scale(1.2, 1.2);
+        }
+
+        &-tarjetas {
+            width: 300px;
+            background-color:  rgb(112, 112, 112);
+            padding: 30px;
+            border-radius: 10%;
+
+            span{
+                color: black;
+                font-weight: 800;
+                font-size: 20px;
+            }
+
+            
+
+            p {
+                margin-bottom: 25px;
+            }
+
+            .tarjeta {
+
+                text-align: left;
+            }
+            
+
+            ul{
+             
+
+                li {
+                    line-height: 25px;
+                }
+            }
+        
+        }
+
+    }
 }
+

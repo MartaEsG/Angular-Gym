@@ -2,8 +2,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 10px;
+    margin: 20px 0px; 
+    
     .clase {
         max-width: 300px;
+        border: 1px solid black;
+        border-radius: 10%;
+        padding: 10px;
+        background-color: beige;
+        
+
         img {
             max-width: 100%;
         }

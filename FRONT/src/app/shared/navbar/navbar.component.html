@@ -1,8 +1,11 @@
-<nav>
+<nav class="nav">
+    <img class="nav-logo" src="https://newfisioten.com/wp-content/uploads/2022/01/LOGO-FINAL.png" alt="logo"/>
+    <div class="nav-buttons">
     <button><a routerLink="/">Home</a></button>
     <button><a routerLink="/clases">Clases</a></button>
-    <button><a *ngIf="api.getToken()" routerLink="/añadir">Añadir Clases</a></button>
-    <button><a *ngIf="!api.getToken()" routerLink="/usuarios">Registrar</a></button>
-    <button><a *ngIf="!api.getToken()" routerLink="/login">Login</a></button>
-    <button *ngIf="api.getToken()" (click)="logout()">LogOut</button>
+    <button *ngIf="api.getToken()"><a routerLink="/añadir">Añadir Clases</a></button>
+    <button *ngIf="!api.getToken()"><a routerLink="/usuarios">Registrar</a></button>
+    <button *ngIf="!api.getToken()"><a routerLink="/login">Login</a></button>
+    <button *ngIf="api.getToken()" (click)="logout()"><a>LogOut</a></button>
+    </div>
 </nav>
