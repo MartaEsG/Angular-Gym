@@ -6,8 +6,8 @@ const {getUsers,register,login, userProfile} = require("../controllers/users.con
 
 usersRouter.post("/register", register);
 usersRouter.post("/login", login);
-usersRouter.get('/',[isCoach], getUsers);
-usersRouter.post('/profile', [isAuth], userProfile);
+usersRouter.get('/', getUsers);
+usersRouter.post('/profile', userProfile);
 
 
 
