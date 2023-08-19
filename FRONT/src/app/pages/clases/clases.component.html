@@ -3,8 +3,10 @@
         <h2>{{clase.name}}</h2>
         <h4>{{clase.duration}}</h4>
         <img src="{{clase.img}}" alt="{{clase.name}}"/>
-        <a routerLink="/clases/{{clase._id}}">Ver más</a>
-        <button *ngIf="classApi.getToken()">Añadir a favoritos</button>
+        <div class="clase-buttons">
+            <button><a routerLink="/clases/{{clase._id}}">Ver más</a></button>
+            <button *ngIf="classApi.getToken()">Añadir a favoritos</button>
+        </div>
 
     </div>
 </div>
