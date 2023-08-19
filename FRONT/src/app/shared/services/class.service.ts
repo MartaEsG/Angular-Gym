@@ -11,6 +11,8 @@ export class ClassService {
   url2: string="http://localhost:5000/users"
   id!: any;
   clase!: ClassI;
+  user!: UserI;
+  
 
   constructor(private http: HttpClient) { }
 
@@ -26,6 +28,26 @@ export class ClassService {
     return localStorage.getItem('token')
   }
 
+
+  isAdminRole(){
+    const usuario = localStorage.getItem("user")
+    if (usuario){
+      const objetoUser: any = JSON.parse(usuario)
+      if
+        (objetoUser.role ==="admin"){
+          console.log(objetoUser.role)
+          return true
+        } else return false
+      } else return false
+      
+    } 
+    
+  
+    
+  
+
+
+  
   logout(){
     localStorage.removeItem('token')
     localStorage.removeItem('user')

@@ -10,7 +10,7 @@ import { ClassService } from 'src/app/shared/services/class.service';
 export class ClasesComponent implements OnInit {
   listado!: ClassI[];
 
-  constructor(private classApi: ClassService ){}
+  constructor(public classApi: ClassService ){}
 
   ngOnInit(): void {
     this.classApi.getClases().subscribe((data: any) => {
